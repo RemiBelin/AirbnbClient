@@ -1,0 +1,14 @@
+{
+    "/login": {
+    "target": "http://localhost:8080",
+    "secure": false
+  },
+    "/api/photos": {
+      "target": "http://localhost:8080",
+      "secure": false
+    },
+    "/api/postlogin": {
+        "target": "http://localhost:8080",
+        "secure": false
+      }
+  }

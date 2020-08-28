@@ -1,0 +1,99 @@
+mat-form-field.mat-form-field {
+    font-size: 14px;
+  }
+
+  ._1m4zger {
+    -webkit-box-align: center !important;
+    align-items: center !important;
+    display: flex !important;
+    width: 100% !important;
+    color: rgb(34, 34, 34) !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-weight: 400 !important;
+}
+
+._bc4egv {
+    flex: 1 1 0% !important;
+}
+._4gelgl {
+    font-size: 16px !important;
+    line-height: 20px !important;
+}
+._1d4sybg {
+    font-size: 12px !important;
+    line-height: 16px !important;
+    padding-top: 4px !important;
+}
+._jro6t0 {
+    display: flex !important;
+}
+
+._1u1x5at:disabled {
+    cursor: not-allowed !important;
+    color: rgb(235, 235, 235) !important;
+    border-color: rgb(235, 235, 235) !important;
+    background: rgb(255, 255, 255) !important;
+}
+._1u1x5at {
+    -webkit-box-pack: center !important;
+    -webkit-box-align: center !important;
+    -webkit-box-flex: 0 !important;
+    width: 32px !important;
+    height: 32px !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    text-align: center !important;
+    color: rgb(113, 113, 113) !important;
+    font-family: inherit !important;
+    touch-action: manipulation !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    text-decoration: none !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: rgb(176, 176, 176) !important;
+    outline: none !important;
+    background: rgb(255, 255, 255) !important;
+    border-radius: 50% !important;
+}
+._krjbj {
+    border: 0px !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(100%) !important;
+    clip-path: inset(100%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0px !important;
+    position: absolute !important;
+    white-space: nowrap !important;
+    width: 1px !important;
+}
+
+._3zlfom {
+    -webkit-box-pack: justify !important;
+    -webkit-box-align: center !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 32px !important;
+    color: rgb(34, 34, 34) !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+}
+._1665lvv {
+    padding:1rem;
+    position: relative !important;
+    color: inherit !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }

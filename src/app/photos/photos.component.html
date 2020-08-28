@@ -1,0 +1,12 @@
+<div style="width:100%;"><br/>
+<mat-grid-list cols="4" rowHeight="170px" style="background-color: black;">
+    <mat-grid-tile style="width:80%;cursor: pointer;" 
+        *ngFor="let tile of tiles;index as photoId"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows" (click)="openSlideShow(tile,photoId)">
+        <div style="height: 100%;width:100%;" >
+            <img [src]="tile.name" style="width:100%;">
+        </div>
+    </mat-grid-tile>
+  </mat-grid-list>  
+</div>

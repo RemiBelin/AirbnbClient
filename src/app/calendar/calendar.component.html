@@ -1,0 +1,86 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title style="font-size: 16px;">Ajoutez des dates pour voir le prix</mat-card-title>
+    <mat-card-subtitle style="font-size: 12px;">4,68 (34 commentaires)</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <div style="display:table-row;">
+      <mat-form-field  appearance="outline">
+        <mat-label>Arrivée</mat-label>
+        <input matInput #startingDateInput [matDatepicker]="startingDatePicker" (focus)="openDatePopup(startingDatePicker)" (dateChange)="focusEndingInput(endingDateInput, startingDatePicker,endingDatePicker)">
+        <mat-datepicker #startingDatePicker></mat-datepicker>
+      </mat-form-field>
+      <div
+        style="display:table-cell;vertical-align: middle !important;width: 24px !important;padding:0 0.5em 1.34375em 0.5em;">
+        <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false"
+          style="height: 24px; width: 24px; display: block; fill: currentcolor;">
+          <path
+            d="m0 12.5a.5.5 0 0 0 .5.5h21.79l-6.15 6.15a.5.5 0 1 0 .71.71l7-7v-.01a.5.5 0 0 0 .14-.35.5.5 0 0 0 -.14-.35v-.01l-7-7a .5.5 0 0 0 -.71.71l6.15 6.15h-21.79a.5.5 0 0 0 -.5.5z"
+            fill-rule="evenodd"></path>
+        </svg>
+      </div>
+      <mat-form-field appearance="outline">
+        <mat-label>Départ</mat-label>
+        <input matInput #endingDateInput [min]="minEndingDate" [matDatepicker]="endingDatePicker" (focus)="openDatePopup(endingDatePicker)">
+        <mat-datepicker #endingDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+      <mat-panel-description>
+          {{voyageurs.nbAdults + voyageurs.nbEnfants}} Voyageurs
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div class="_1y5b6gl">
+        <div class="_1m4zger">
+          <div class="_bc4egv">
+            <div id="GuestPicker-drawer-form-adults" class="_4gelgl">Adultes</div>
+            <div class="_1d4sybg"></div>
+          </div>
+          <div class="_jro6t0">
+            <div class="_3zlfom" id="GuestPicker-drawer-form-adults-stepper" role="group"
+              aria-labelledby="GuestPicker-drawer-form-adults"><button class="_1u1x5at" type="button"  (click)="soustraireAdulte()"  [disabled]="voyageurs.nbAdults == 0" ><svg viewBox="0 0 24 24" role="presentation" aria-hidden="true"
+                  focusable="false" style="height: 22px; width: 22px; display: block; fill: currentcolor;">
+                  <rect height="2" rx="1" width="12" x="6" y="11"></rect>
+                </svg></button>
+              <div class="_1665lvv">{{voyageurs.nbAdults}}</div><button class="_1u1x5at" type="button" (click)="ajoutAdulte()"><svg viewBox="0 0 24 24"
+                  focusable="false" style="height: 22px; width: 22px; display: block; fill: currentcolor;">
+                  <rect height="2" rx="1" width="12" x="6" y="11"></rect>
+                  <rect height="12" rx="1" width="2" x="11" y="6"></rect>
+                </svg></button>
+            </div><span aria-atomic="true" aria-live="polite" class="_krjbj"></span>
+          </div>
+        </div>
+
+        <div class="_1m4zger">
+          <div class="_bc4egv">
+            <div id="GuestPicker-drawer-form-adults" class="_4gelgl">Enfants</div>
+            <div class="_1d4sybg"></div>
+          </div>
+          <div class="_jro6t0">
+            <div class="_3zlfom" id="GuestPicker-drawer-form-adults-stepper" role="group"
+              aria-labelledby="GuestPicker-drawer-form-adults"><button class="_1u1x5at" type="button"  (click)="soustraireEnfant()"  [disabled]="voyageurs.nbEnfants == 0" ><svg viewBox="0 0 24 24" role="presentation" aria-hidden="true"
+                  focusable="false" style="height: 22px; width: 22px; display: block; fill: currentcolor;">
+                  <rect height="2" rx="1" width="12" x="6" y="11"></rect>
+                </svg></button>
+              <div class="_1665lvv">{{voyageurs.nbEnfants}}</div><button class="_1u1x5at" type="button" (click)="ajoutEnfant()"><svg viewBox="0 0 24 24"
+                  focusable="false" style="height: 22px; width: 22px; display: block; fill: currentcolor;">
+                  <rect height="2" rx="1" width="12" x="6" y="11"></rect>
+                  <rect height="12" rx="1" width="2" x="11" y="6"></rect>
+                </svg></button>
+            </div><span aria-atomic="true" aria-live="polite" class="_krjbj"></span>
+          </div>
+        </div>
+    </div>
+    </mat-expansion-panel>
+
+  </mat-card-content>
+  <mat-card-actions style="display: flex;">
+    <button mat-raised-button>LIKE</button>
+    <button mat-raised-button>SHARE</button>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="primary" (click)="bookForDates(startingDateInput)">Réserver</button>
+  </mat-card-actions>
+</mat-card>

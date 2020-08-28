@@ -1,0 +1,22 @@
+[
+    {
+        "name": "assets/img/chambre.webp",
+        "description": "You room / Votre chambre"
+    },
+    {
+        "name": "assets/img/chambre_2.webp",
+        "description": "You room / Votre chambre"
+    },
+    {
+        "name": "assets/img/cuisine.webp",
+        "description": "The kitchen / La cuisine"
+    },
+    {
+        "name": "assets/img/salle_de_bain.webp",
+        "description": "The bathroom / La salle de bain"
+    },
+    {
+        "name": "assets/img/salon.webp",
+        "description": "Living room- we share this space with you"
+    }
+]

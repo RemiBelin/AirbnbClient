@@ -1,0 +1,6 @@
+<mat-grid-list cols="3" rowHeight="100%" >
+    <mat-grid-tile style="cursor:pointer;"><img src="assets/img/ic_keyboard_arrow_left_48px-512.png" (click)="previousPhoto()"  style="width:40px;height:50px;"></mat-grid-tile>
+    <mat-grid-tile ><img [src]="currentPhoto.name" style="width:100%;"></mat-grid-tile>
+    <mat-grid-tile style="cursor:pointer;"><img src="assets/img/ic_keyboard_arrow_right_48px-512.png" (click)="nextPhoto()" style="width:40px;height:50px;"></mat-grid-tile>
+  </mat-grid-list>
+  
