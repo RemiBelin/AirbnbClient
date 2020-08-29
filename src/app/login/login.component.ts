@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   onSubmitLogin()
   {
-    console.log("Starting onSubmitLogin");
+    console.log("Starting onSubmitLogin MODIF LOCAL");
 
     this.listing.login(this.loginForm.value).subscribe(result => console.log("result=" + result));
  
