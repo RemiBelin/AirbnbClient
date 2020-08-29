@@ -62,7 +62,7 @@ export class CalendarComponent implements OnInit {
   }
   focusEndingInput(endingInput:MatInput,startingDatepicker:MatDatepicker<Moment>,endingDatepicker:MatDatepicker<Moment>)
   {
-    console.log("focusEndingDate starting...");
+    console.log("focusEndingDate starting...modif local");
 
     //this.minEndingDate = datepicker._selected.toDate();
     //startingDatepicker.
