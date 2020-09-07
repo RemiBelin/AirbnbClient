@@ -3,21 +3,15 @@ import { NgModule, InjectionToken } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListingComponent } from './listing/listing.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DialogPhotosComponent } from './dialog-photos/dialog-photos.component';
-import { PhotosComponent } from './photos/photos.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { SlideShowComponent } from './slide-show/slide-show.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
 //import { HERO1,HERO2, HERO3 } from './heroes';
-import { MY_HERO1, MY_HERO2, hero3 } from './heroes';
-import { CalendarComponent } from './calendar/calendar.component';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatDatepickerModule} from '@angular/material/datepicker'; 
 import {MatMomentDateModule, MomentDateAdapter } from '@angular/material-moment-adapter'; 
@@ -31,43 +25,30 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {MatButtonModule} from '@angular/material/button';
+import { bookingData } from "./bookingData";
+import {ListingModule} from "./listing-module/listing.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListingComponent,
     LoginComponent,
-    DialogPhotosComponent,
-    PhotosComponent,
-    SlideShowComponent,
-    CalendarComponent,
     ReactiveformComponent,
     PageNotFoundComponent
    ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MatGridListModule,
-    NoopAnimationsModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatListModule,
-    MatCardModule,
-    MatDatepickerModule,
-    MatMomentDateModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatExpansionModule,
-    ReactiveFormsModule,
-    MatButtonModule
+     HttpClientModule,
+     ReactiveFormsModule,
+    MatButtonModule,
+     ListingModule,
+     AppRoutingModule //C'est important de le mettre à la fin!
+   
   ],
   providers: [
     {provide: 'api', useValue: 'api/v5/dialogflow'},
-    {provide: 'hero1', useValue: MY_HERO1},
-    {provide: MY_HERO2, useValue: hero3},
-    {provide: 'hero3', useValue: hero3},
-    {provide: MAT_DATE_LOCALE, useValue: 'fr'}
+    {provide: MAT_DATE_LOCALE, useValue: 'fr'},
+    //{provide: ListingService },
+    {provide: bookingData, useClass:bookingData }  //same as : {provide: bookingData }
   ],
   bootstrap: [AppComponent],
   entryComponents: [

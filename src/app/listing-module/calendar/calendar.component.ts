@@ -5,6 +5,7 @@ import * as moment from 'moment';
 import { MatInput } from '@angular/material/input';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { Router } from '@angular/router';
+import { bookingData } from '../../bookingData';
 
 interface Voyageurs  {
   nbAdults:number,
@@ -19,7 +20,7 @@ interface Voyageurs  {
 })
 export class CalendarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private data:bookingData) { }
 
  ngOnInit() {
 
@@ -75,12 +76,10 @@ export class CalendarComponent implements OnInit {
   bookForDates(startingDateInput:MatInput)
   {
     moment.locale("fr");
-    var startDate = moment(startingDateInput.value,"DD/MM/YYYY");
     
-    console.log("startDate=" + startDate.format("DD - MMMM - YYYY"));
-
+    this.data.dateS =  moment(startingDateInput.value,"DD/MM/YYYY");;
+  
     this.router.navigate(["reactiveform"]);
-
 
   }
 }

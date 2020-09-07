@@ -15,7 +15,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatGridListModule} from '@angular/material/grid-list';
 
 import { HttpClientModule } from '@angular/common/http';
-import { MY_HERO2, hero3 } from '../heroes';
+import { MY_HERO2, hero3 } from '../providers/heroes';
 
 describe('PhotosComponent', () => {
   let component: PhotosComponent;

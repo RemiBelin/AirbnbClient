@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { bookingData } from '../bookingData';
 
 @Component({
   selector: 'app-reactiveform',
@@ -24,7 +25,7 @@ export class ReactiveformComponent implements OnInit {
   descriptionAlertText = 'Specify Description between 30 to 100 characters';
 
   // create a FormBuilder dependecy injection
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private data:bookingData) {
 
     // reference FormBuilder instance to control the validation of each form field
     this.simpleBegReactiveForm = fb.group({
@@ -42,10 +43,10 @@ export class ReactiveformComponent implements OnInit {
   }
   
   ngOnInit() {
+    console.log("this.data.dateS=" + this.data.dateS.format("DD - MMMM - YYYY"));
 
     // subscribe checkbox
     this.simpleBegReactiveForm.get('validate').valueChanges.subscribe(
-
     (validate) => {
 
       if (validate == '1') {

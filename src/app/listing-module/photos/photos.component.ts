@@ -3,13 +3,11 @@ import { HttpClient, } from '@angular/common/http';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA, DialogPosition} from '@angular/material/dialog';
 import { SlideShowComponent } from '../slide-show/slide-show.component';
 //import { HERO1 } from '../heroes';
-import { Hero } from '../hero';
-import { MY_HERO1, MY_HERO2 } from '../heroes';
-import { ListingService } from '../listing.service';
+import { Hero } from '../providers/hero';
+import { MY_HERO1, MY_HERO2 } from '../providers/heroes';
+import { ListingService } from '../../listing-service/listing.service';
 
-
-export interface Tile {
-  cols: number;
+export interface Tile {  cols: number;
   rows: number;
   name: string;
 }

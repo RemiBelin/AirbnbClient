@@ -9,10 +9,19 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { MatGridListModule, MatDialogModule, MatDividerModule, MatListModule, MatCardModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MAT_DATE_LOCALE } from '@angular/material';
+//import { MatGridListModule, MatDialogModule, MatDividerModule, MatListModule, MatCardModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MAT_DATE_LOCALE } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
-import { MY_HERO1, MY_HERO2, hero3 } from './heroes';
+import { MY_HERO1, MY_HERO2, hero3 } from './providers/heroes';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

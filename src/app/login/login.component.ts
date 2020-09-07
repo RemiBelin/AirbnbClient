@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ListingService } from '../listing.service';
+import { ListingService } from '../listing-service/listing.service';
+
 
 @Component({
   selector: 'app-login',
