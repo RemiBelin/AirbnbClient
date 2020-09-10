@@ -5,7 +5,7 @@ import { SlideShowComponent } from '../slide-show/slide-show.component';
 //import { HERO1 } from '../heroes';
 import { Hero } from '../providers/hero';
 import { MY_HERO1, MY_HERO2 } from '../providers/heroes';
-import { ListingService } from '../../listing-service/listing.service';
+import { ListingService } from '../listing.service';
 
 export interface Tile {  cols: number;
   rows: number;

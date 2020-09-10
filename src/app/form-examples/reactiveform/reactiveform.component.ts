@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
-import { bookingData } from '../bookingData';
+import { bookingData } from '../../bookingData';
 
 @Component({
   selector: 'app-reactiveform',
@@ -43,7 +43,9 @@ export class ReactiveformComponent implements OnInit {
   }
   
   ngOnInit() {
-    console.log("this.data.dateS=" + this.data.dateS.format("DD - MMMM - YYYY"));
+
+    if(this.data.dateS)
+      console.log("this.data.dateS=" + this.data.dateS.format("DD - MMMM - YYYY"));
 
     // subscribe checkbox
     this.simpleBegReactiveForm.get('validate').valueChanges.subscribe(

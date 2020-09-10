@@ -18,6 +18,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { ListingService } from './listing.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
   imports: [
     CommonModule,
     MatGridListModule,
-    NoopAnimationsModule,
+    //NoopAnimationsModule, // contient BrowserModule !
     MatDialogModule,
     MatDividerModule,
     MatListModule,
@@ -49,6 +50,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     {provide: 'hero1', useValue: MY_HERO1},
     {provide: MY_HERO2, useValue: hero3},
     {provide: 'hero3', useValue: hero3},
+    ListingService
   ],
 })
 export class ListingModule { }

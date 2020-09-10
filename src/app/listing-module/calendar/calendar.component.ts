@@ -78,8 +78,7 @@ export class CalendarComponent implements OnInit {
     moment.locale("fr");
     
     this.data.dateS =  moment(startingDateInput.value,"DD/MM/YYYY");;
-  
-    this.router.navigate(["reactiveform"]);
+    this.router.navigate(["display/forms"]);
 
   }
 }

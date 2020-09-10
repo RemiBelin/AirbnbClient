@@ -4,9 +4,7 @@ import { Observable, of, throwError } from 'rxjs';
 import { map, take, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ListingService {
 
   //private dataUrl = '/api/photos';
