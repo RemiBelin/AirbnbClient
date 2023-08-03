@@ -37,9 +37,5 @@ import { FormExamplesModule } from './form-examples/form-examples.module';
     {provide: bookingData, useClass:bookingData }  //same as : {provide: bookingData }
   ],
   bootstrap: [AppComponent],
-  entryComponents: [
-    //LoginComponent
-    //SlideShowComponent
-  ],
 })
 export class AppModule {   }
